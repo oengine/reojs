@@ -24,7 +24,7 @@
     "psr-4": {
       "OEngine\\Reojs\\": "src/"
     }
-  },
+  },                                                        
   "autoload-dev": {
     "psr-4": {}
   },

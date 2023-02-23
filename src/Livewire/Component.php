@@ -21,7 +21,7 @@ class Component extends ComponentBase
     public function refreshData($option = [])
     {
         if (!isset($option['id'])) $option['id'] = $this->id;
-        $this->dispatchBrowserEvent('reload_component', $option);
+        $this->dispatchBrowserEvent('reojs-refresh', $option);
     }
 
     public function redirectCurrent()
@@ -43,6 +43,7 @@ class Component extends ComponentBase
             return;
         }
         parent::ensureViewHasValidLivewireLayout($view);
-        $view->extends(theme_layout())->section('content');
+        if (function_exists('theme_layout'))
+            $view->extends(theme_layout())->section('content');
     }
 }
