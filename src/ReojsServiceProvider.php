@@ -5,6 +5,7 @@ namespace OEngine\Reojs;
 use Illuminate\Support\ServiceProvider;
 use OEngine\LaravelPackage\ServicePackage;
 use OEngine\LaravelPackage\WithServiceProvider;
+use OEngine\Reojs\Livewire\LivewireLoader;
 
 class ReojsServiceProvider extends ServiceProvider
 {
@@ -26,5 +27,11 @@ class ReojsServiceProvider extends ServiceProvider
             ->runsMigrations()
             ->RouteWeb()
             ->runsSeeds();
+    }
+    public function packageRegistered()
+    {
+        add_action(PACKAGE_SERVICE_PROVIDER_BOOT, function ($bootPackage) {
+            LivewireLoader::Register($bootPackage->package->basePath('/Http/Livewire'), $bootPackage->getNamespaceName() . '\\Http\\Livewire', $bootPackage->package->shortName() . '::');
+        });
     }
 }

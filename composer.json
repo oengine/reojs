@@ -12,7 +12,8 @@
     }
   ],
   "require": {
-    "oengine/laravel-package": "dev-main"
+    "oengine/laravel-package": "dev-main",
+    "livewire/livewire":"^2.12.1"
   },
   "require-dev": {},
   "autoload": {
