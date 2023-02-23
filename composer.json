@@ -1,9 +1,9 @@
 {
-  "name": "oengine/boilerplate",
-  "description": "A PHP library for boilerplate code syntax.",
+  "name": "oengine/reojs",
+  "description": "A PHP library for reojs code syntax.",
   "license": "MIT",
   "keywords": [],
-  "homepage": "https://github.com/oengine/laravel-package-boilerplate",
+  "homepage": "https://github.com/oengine/reojs",
   "authors": [
     {
       "name": "nguyen van hau",
@@ -21,7 +21,7 @@
       "helpers/function.php"
     ],
     "psr-4": {
-      "OEngine\\Boilerplate\\": "src/"
+      "OEngine\\Reojs\\": "src/"
     }
   },
   "autoload-dev": {
@@ -36,7 +36,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "OEngine\\Boilerplate\\BoilerplateServiceProvider"
+        "OEngine\\Reojs\\ReojsServiceProvider"
       ],
       "aliases": {}
     }

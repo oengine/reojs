@@ -1,12 +1,12 @@
 <?php
 
-namespace OEngine\Boilerplate;
+namespace OEngine\Reojs;
 
 use Illuminate\Support\ServiceProvider;
 use OEngine\LaravelPackage\ServicePackage;
 use OEngine\LaravelPackage\WithServiceProvider;
 
-class BoilerplateServiceProvider extends ServiceProvider
+class ReojsServiceProvider extends ServiceProvider
 {
     use WithServiceProvider;
 
@@ -17,7 +17,7 @@ class BoilerplateServiceProvider extends ServiceProvider
          *
          */
         $package
-            ->name('boilerplate')
+            ->name('reojs')
             ->hasConfigFile()
             ->hasViews()
             ->hasHelpers()
