@@ -1,0 +1,12 @@
+{
+  "id": "module-reojs-640e7d39-165b-47c5-a895-5e996e375f9b2832469",
+  "name": "reojs",
+  "alias": "reojs",
+  "description": "",
+  "keywords": [],
+  "priority": 100,
+  "namespace": "OEngine\\Reojs",
+  "aliases": {},
+  "files": [],
+  "requires": []
+}

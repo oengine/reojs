@@ -24,3 +24,11 @@ if (!function_exists('AllClass')) {
         }
     }
 }
+
+if (!function_exists('livewire_component')) {
+    function livewire_component($name, $params=[])
+    {
+        return  platform_encode(['type' => 'livewire', 'name' => $name, 'params' => $params]);
+    }
+}
+//platform_decode
