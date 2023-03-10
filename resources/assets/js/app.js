@@ -17,5 +17,20 @@ if (window.ModulePlatform) {
       console.log("message.processed");
       window.ModulePlatform.dispatch("platform::component", component.el);
     });
+    window.addEventListener("reojs-refresh", ({ detail: option }) => {});
+    window.addEventListener("reojs-message", ({ detail: option }) => {
+      if (typeof option == "string") {
+        window.ModulePlatform.addInfo(option, "reojs-message");
+      } else {
+        const { error, message, type, meta, ...data } = option;
+
+        window.ModulePlatform.addMessage(
+          message ?? error,
+          type,
+          "reojs-message",
+          { ...data, ...meta }
+        );
+      }
+    });
   });
 }
